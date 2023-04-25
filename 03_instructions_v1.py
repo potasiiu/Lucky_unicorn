@@ -1,5 +1,6 @@
 """
-Lucky Unicorn Pre-Assessment - V3
+Lucky Unicorn Pre-Assessment
+Instructions - V1
 Created By: Terry Zhen
 """
 
@@ -25,7 +26,20 @@ def yes_no(question_text):
         else:
          print("<error> Please Enter y/n")
 
+# function that displays instructions
+def instructions():
+    print("**** How to Play ****")
+    print()
+    print("The rules of the game will go here")
+    print()
+    print("Program continues")
+    print()
+
 
 # Main Routine
-question = yes_no("Have you played before? ")
-print(f"You have entered '{question}'")
+played_before = yes_no("Have you played this game before? ")
+
+if played_before == "no":
+    instructions()
+else:
+    print("program continues")
